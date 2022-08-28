@@ -1,7 +1,7 @@
 {
-  "miniprogramRoot": ".dist",
+  "miniprogramRoot": "./dist",
   "projectname": "time-tracker",
-  "description": "",
+  "description": "a self-used time tracker",
   "appid": "wxb604d548939868ce",
   "setting": {
     "urlCheck": true,
