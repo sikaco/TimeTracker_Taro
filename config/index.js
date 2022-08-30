@@ -18,13 +18,13 @@ const config = {
     IS_WEAPP: process.env.TARO_ENV === "weapp"
   },
   alias: {
-    "@/src": path.resolve(__dirname, "..", "src"),
+    "$src": path.resolve(__dirname, "..", "src"),
     "@scss": path.resolve(__dirname, "..", "src/scss"),
     "@service": path.resolve(__dirname, "..", "src/service"),
-    "@/components": path.resolve(__dirname, "..", "src/components"),
-    "@/views": path.resolve(__dirname, "..", "src/components/views"),
-    "@/xuder": path.resolve(__dirname, "..", "src/components/xuder"),
-    "@/utils": path.resolve(__dirname, "..", "src/components/utils"),
+    "$components": path.resolve(__dirname, "..", "src/components"),
+    "$views": path.resolve(__dirname, "..", "src/components/views"),
+    "$xuder": path.resolve(__dirname, "..", "src/components/xuder"),
+    "$utils": path.resolve(__dirname, "..", "src/components/utils"),
   },
   copy: {
     patterns: [],

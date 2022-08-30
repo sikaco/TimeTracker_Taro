@@ -2,7 +2,7 @@ import { Observable } from 'rxjs'
 import { handleActions, createAction, Action } from 'redux-actions'
 import { combineEpics } from 'redux-observable'
 import { Store } from 'redux'
-import { EpicInput, GlobalState, noOpAction } from '@/xuder'
+import { EpicInput, GlobalState, noOpAction } from '$xuder'
 // import { throwError } from 'lib/throw-error'
 // import { hasPayload } from 'lib/truthiness'
 import { State } from './types'
@@ -40,7 +40,7 @@ export const reducer = handleActions<State, any>(
     // [`${actions.getProjectTagsSuccess}`]: handleGetProjectTagsSuccess,
     // [`${actions.getProjectsCountSuccess}`]: handleGetProjectsCountSuccess
   },
-  defaultState
+  defaultState,
 )
 
 export const epic = combineEpics<any>()

@@ -8,7 +8,7 @@
 import React from 'react'
 import { ComponentOptions, FunctionComponent } from '@tarojs/taro'
 import { Picker } from '@tarojs/components'
-import { isArray } from '@/utils'
+import { isArray } from '$utils'
 import './index.scss'
 import { TaroPickerSelectorProps, RangeItem } from './type'
 
@@ -23,7 +23,7 @@ const TaroPickerSelector: FunctionComponent<TaroPickerSelectorProps> & {
     styleName = '',
     title = '',
     mode = 'selector',
-    columnReset = false
+    columnReset = false,
   } = props
 
   const handleChange = (e: any) => {
@@ -82,7 +82,7 @@ const TaroPickerSelector: FunctionComponent<TaroPickerSelectorProps> & {
 }
 
 TaroPickerSelector.options = {
-  addGlobalClass: true
+  addGlobalClass: true,
 }
 
 export default TaroPickerSelector

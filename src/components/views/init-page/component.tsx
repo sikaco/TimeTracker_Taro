@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FunctionComponent, useEffect } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { View } from '@tarojs/components'
-import { GlobalState } from '@/xuder/reducer'
+import { GlobalState } from '$xuder/reducer'
 import cx from 'classnames'
 import { DispatchProps, StateProps } from './types'
 import { actions } from './modules'
@@ -23,7 +23,7 @@ import './index.scss'
 //
 // #endregion
 
-export interface OwnProps {}
+export interface OwnProps { }
 
 export type Props = StateProps & DispatchProps & Readonly<OwnProps>
 
@@ -37,25 +37,21 @@ export type Props = StateProps & DispatchProps & Readonly<OwnProps>
 //     }
 //   }
 // )
-class Index extends React.PureComponent<Props> {
-  cxPrefix = 'organization-portal'
 
-  constructor(props) {
-    super(props)
-  }
+const cxPrefix = 'organization-portal'
 
-  componentDidMount() {
-    const { actions } = this.props
+const Index: FunctionComponent<Props> = () => {
 
+  useEffect(() => {
     // console.log('actions.getProjectTags', actions.getProjectTags)
-  }
+  }, [])
 
-  componentWillUnmount() {}
+  const arr = [
+    1,
+    2,
+    '3']
 
-  render() {
-    // return <div className={styles[this.cxPrefix]}></div>
-    return <View className="index">123</View>
-  }
+  return <View className="index">1234</View>
 }
 
 export default Index

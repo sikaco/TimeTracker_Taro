@@ -8,12 +8,12 @@
 import React, { Component } from 'react'
 import { View, Text, PickerView, PickerViewColumn } from '@tarojs/components'
 import './index.scss'
-import { isArray } from '@/utils'
+import { isArray } from '$utils'
 import { TaroPickerSelectorProps, RangeItem } from './type'
 
 export default class TaroPickerSelector extends Component<
-  TaroPickerSelectorProps,
-  any
+TaroPickerSelectorProps,
+any
 > {
   static defaultProps = {
     range: [],
@@ -22,18 +22,19 @@ export default class TaroPickerSelector extends Component<
     cascade: true,
     // rangeKey: 'label',
     onChange: () => {},
-    onValueChange: () => {}
+    onValueChange: () => {},
   }
 
   static options = {
-    addGlobalClass: true
+    addGlobalClass: true,
   }
+
   realValue: any
 
   constructor(props: TaroPickerSelectorProps) {
     super(props)
     this.state = {
-      visible: false
+      visible: false,
     }
   }
 
@@ -41,7 +42,7 @@ export default class TaroPickerSelector extends Component<
     if (nextProps.value !== this.props.value) {
       const { value = [0] } = nextProps
       this.setState({
-        selectedValue: value
+        selectedValue: value,
       })
     }
   }
@@ -52,19 +53,19 @@ export default class TaroPickerSelector extends Component<
     this.setState({
       visible: true,
       animation: 'slide-up',
-      selectedValue: value
+      selectedValue: value,
     })
   }
 
   closeModal = (e?: any) => {
     e && e.stopPropagation()
     this.setState({
-      animation: 'slide-down'
+      animation: 'slide-down',
     })
     // 延时 以展示完收起动画
     setTimeout(() => {
       this.setState({
-        visible: false
+        visible: false,
       })
     }, 150)
   }

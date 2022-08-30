@@ -10,9 +10,9 @@ import React, { FunctionComponent } from 'react'
 import { ComponentOptions } from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import { LinearGradientProps } from 'react-native-linear-gradient'
-import './index.scss'
 import { ITouchEvent } from '@tarojs/components/types/common'
-import { isArray } from '@/utils'
+import { isArray } from '$utils'
+import './index.scss'
 
 let UIManager = {},
   LinearGradient: any = null
@@ -35,7 +35,7 @@ export interface LinearGradientType extends LinearGradientProps {
 }
 
 const TaroLinearGradient: FunctionComponent<
-  LinearGradientType & TaroLinearGradientProps
+LinearGradientType & TaroLinearGradientProps
 > & {
   options?: ComponentOptions;
 } = props => {
@@ -47,7 +47,7 @@ const TaroLinearGradient: FunctionComponent<
     onClick = () => {},
     colors = [],
     angle = 180,
-    useColors = false
+    useColors = false,
   } = props
   const len = colors.length
   const LinearGradientColors =
@@ -59,7 +59,7 @@ const TaroLinearGradient: FunctionComponent<
       ? Object.assign(customeStyle, ...(style as any))
       : Object.assign(customeStyle, style)
     // 如果有切图 以切图为主
-    if (!src && UIManager['BVLinearGradient']) {
+    if (!src && UIManager.BVLinearGradient) {
       return (
         <LinearGradient
           {...props}
@@ -89,7 +89,7 @@ const TaroLinearGradient: FunctionComponent<
   if (useColors) {
     const colorString = LinearGradientColors.map(
       (colorStr: string, index: number) =>
-        `${colorStr} ${index === len - 1 ? '100' : (index / len) * 100}%`
+        `${colorStr} ${index === len - 1 ? '100' : (index / len) * 100}%`,
     ).join(',')
     background = `linear-gradient(${angle}deg, ${colorString})`
   }
@@ -111,7 +111,7 @@ const TaroLinearGradient: FunctionComponent<
 }
 
 TaroLinearGradient.options = {
-  addGlobalClass: true
+  addGlobalClass: true,
 }
 
 export default TaroLinearGradient

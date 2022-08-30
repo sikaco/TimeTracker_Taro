@@ -24,34 +24,34 @@
       "global.d.ts"
     ],
     "paths": {
-      "@/components": [
+      "$components": [
         "src/components/"
       ],
-      "@/components/*": [
+      "$components/*": [
         "src/components/*"
       ],
-      "@/views": [
+      "$views": [
         "src/components/views"
       ],
-      "@/views/*": [
+      "$views/*": [
         "src/components/views/*"
       ],
-      "@/xuder": [
+      "$xuder": [
         "src/components/xuder"
       ],
-      "@/xuder/*": [
+      "$xuder/*": [
         "src/components/xuder/*"
       ],
-      "@/utils": [
+      "$utils": [
         "src/components/utils"
       ],
-      "@/utils/*": [
+      "$utils/*": [
         "src/components/utils/*"
       ],
-      "@/service": [
+      "$service": [
         "src/service"
       ],
-      "@/service/*": [
+      "$service/*": [
         "src/service/*"
       ],
     },

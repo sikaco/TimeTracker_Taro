@@ -9,7 +9,7 @@ import { Color, ComponentOptions } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import React, { FunctionComponent, CSSProperties } from 'react'
 import './index.scss'
-import { isArray } from '@/utils'
+import { isArray } from '$utils'
 
 interface ShadowOffset {
   width: number;
@@ -45,18 +45,18 @@ const BoxShadow: FunctionComponent<BoxShadowProps> & {
   } = props
   let customeStyle: CSSProperties & BoxShadowProps = IS_RN
     ? {
-        shadowColor,
-        shadowOffset,
-        shadowOpacity,
-        shadowRadius,
-        elevation
-      }
+      shadowColor,
+      shadowOffset,
+      shadowOpacity,
+      shadowRadius,
+      elevation,
+    }
     : {
-        boxShadow
-      }
+      boxShadow,
+    }
   const propsStyle = Object.assign(
     customeStyle,
-    ...(isArray(style) ? style : ([style] as any))
+    ...(isArray(style) ? style : ([style] as any)),
   )
   return !IS_WEAPP ? (
     <View
@@ -74,7 +74,7 @@ const BoxShadow: FunctionComponent<BoxShadowProps> & {
 }
 
 BoxShadow.options = {
-  addGlobalClass: true
+  addGlobalClass: true,
 }
 
 export default BoxShadow

@@ -1,21 +1,63 @@
 {
-  "extends": ["taro/react"],
+  // "parser": "@typescript-eslint/parser",
+  "plugins": [
+    // "@typescript-eslint"
+  ],
+  "extends": [
+    "taro/react",
+    "airbnb-typescript"
+    // "eslint:recommended",
+    // "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "rules": {
-    "semi": ["error", "never"],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "@typescript-eslint/semi": [
+      "error",
+      "never"
+    ],
+    "import/extensions": [
+      "error",
+      "never"
+    ],
     "no-undef": 0,
-    "import/first": 0,
+    // "import/first": 0,
     "space-infix-ops": 1,
-    "array-bracket-spacing": 0,
-    "object-curly-spacing": ["error","always"],
-    "quotes": ["error", "single"],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "spaced-comment": 2,
     "no-unused-vars": 0,
     "react/no-unused-state": 0,
-    "react/sort-comp": 0,
+    "react/sort-comp": 1,
     "react/self-closing-comp": 1,
     "react/no-multi-comp": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-    "@typescript-eslint/no-unused-vars": [1, { "varsIgnorePattern": "React" }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      1,
+      {
+        "varsIgnorePattern": "React"
+      }
+    ],
     "@typescript-eslint/no-undef": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/no-empty-function": 0,
@@ -28,6 +70,17 @@
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/no-inferrable-types": 0,
-    "@typescript-eslint/no-shadow": 0
+    "@typescript-eslint/no-shadow": 0,
+    // "sort-imports": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ]
   }
 }
