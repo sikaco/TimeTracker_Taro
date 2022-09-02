@@ -30,7 +30,7 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "publish:pages": "yarn build:h5 && yarn gh-pages -d dist/h5 -t",
-    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "browserslist": [
     "last 3 versions",

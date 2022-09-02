@@ -16,7 +16,7 @@ export interface TaroPickerSelectorProps {
    * @supported weapp, h5, rn
    * @default selector
    */
-  mode: "selector" | "multiSelector";
+  mode: 'selector' | 'multiSelector';
   /** mode为 selector 或 multiSelector 时，range 有效
    * @supported weapp, h5, rn
    * @default []

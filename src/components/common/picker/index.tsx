@@ -5,79 +5,79 @@
  * @Last Modified by: qiuz
  */
 
-import React, { Component } from "react";
-import { View, Text } from "@tarojs/components";
-import Modal from "@ant-design/react-native/lib/modal";
-import PickerView from "@ant-design/react-native/lib/picker-view";
-import "./index.scss";
-import { TaroPickerSelectorProps } from "./type";
+import React, { Component } from 'react'
+import { View, Text } from '@tarojs/components'
+import Modal from '@ant-design/react-native/lib/modal'
+import PickerView from '@ant-design/react-native/lib/picker-view'
+import './index.scss'
+import { TaroPickerSelectorProps } from './type'
 
 export default class TaroPickerSelector extends Component<
-  TaroPickerSelectorProps,
-  any
+TaroPickerSelectorProps,
+any
 > {
   static defaultProps = {
     range: [],
     value: [],
     cols: 1,
     cascade: true,
-    onChange: () => {}
-  };
+    onChange: () => {},
+  }
 
   static options = {
-    addGlobalClass: true
-  };
+    addGlobalClass: true,
+  }
 
   constructor(props: TaroPickerSelectorProps) {
-    super(props);
+    super(props)
     this.state = {
-      visible: false
-    };
+      visible: false,
+    }
   }
 
   componentWillReceiveProps(nextProps: TaroPickerSelectorProps) {
     if (nextProps.value !== this.props.value) {
-      const { value = [0] } = nextProps;
+      const { value = [0] } = nextProps
       this.setState({
-        selectedValue: value
-      });
+        selectedValue: value,
+      })
     }
   }
 
   showModal = () => {
-    const { value = [0] } = this.props;
+    const { value = [0] } = this.props
     this.setState({
       visible: true,
-      selectedValue: value
-    });
-  };
+      selectedValue: value,
+    })
+  }
 
   closeModal = () => {
     this.setState({
-      visible: false
-    });
-  };
+      visible: false,
+    })
+  }
 
   handleChange = (value: any) => {
     this.setState(
       {
-        selectedValue: value
+        selectedValue: value,
       },
       () => {
-        this.props.onValueChange && this.props.onValueChange(value);
-      }
-    );
-  };
+        this.props.onValueChange && this.props.onValueChange(value)
+      },
+    )
+  }
 
   onConfirm = () => {
-    const { selectedValue } = this.state;
-    this.props.onChange(selectedValue);
-    this.closeModal();
-  };
+    const { selectedValue } = this.state
+    this.props.onChange(selectedValue)
+    this.closeModal()
+  }
 
   render() {
-    const { range = [], cols, cascade, title } = this.props;
-    const { visible, selectedValue } = this.state;
+    const { range = [], cols, cascade, title } = this.props
+    const { visible, selectedValue } = this.state
     return (
       <View onClick={this.showModal}>
         <Modal
@@ -99,9 +99,9 @@ export default class TaroPickerSelector extends Component<
           </View>
           <PickerView
             itemStyle={{
-              width: "100%",
-              display: "flex",
-              alignItems: "center"
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
             }}
             value={selectedValue}
             cols={cols}
@@ -112,6 +112,6 @@ export default class TaroPickerSelector extends Component<
         </Modal>
         {this.props.children}
       </View>
-    );
+    )
   }
 }

@@ -26,9 +26,7 @@
       "error",
       "never"
     ],
-    // "@typescript-eslint/indent": [
-    //   "off", 2, {}
-    // ],
+    // "@typescript-eslint/indent": ["off"],
     "@typescript-eslint/semi": [
       "error",
       "never"

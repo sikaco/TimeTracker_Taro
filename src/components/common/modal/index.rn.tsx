@@ -16,7 +16,7 @@ import { ComponentOptions } from '@tarojs/taro'
 const TaroModal: FunctionComponent<TaroModalProps> & {
   options?: ComponentOptions;
 } = (props) => {
-  const { visible = false, closable = false, onClose = () => {}, closeIconStyle = {}, closeIconName = '' , animationType = 'fade' } = props
+  const { visible = false, closable = false, onClose = () => {}, closeIconStyle = {}, closeIconName = '', animationType = 'fade' } = props
 
   return (
     <Modal
@@ -42,6 +42,5 @@ const TaroModal: FunctionComponent<TaroModalProps> & {
 TaroModal.options = {
   addGlobalClass: true,
 }
-
 
 export default TaroModal

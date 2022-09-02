@@ -25,7 +25,7 @@ export const isAndriod = () => {
 export const initBackHandler = (callback: () => boolean = () => false) => {
   // callback 返回 true 阻止返回 默认返回false
   if (IS_RN) {
-    RN.BackHandler.addEventListener('hardwareBackPress', function() {
+    RN.BackHandler.addEventListener('hardwareBackPress', function () {
       if (Taro.getCurrentPages().length === 1) {
         const result = callback()
         !result && Taro.navigateBack({ delta: 1 })

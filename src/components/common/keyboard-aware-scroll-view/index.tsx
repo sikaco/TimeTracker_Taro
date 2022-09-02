@@ -28,7 +28,7 @@ function TaroKeyboardAwareScrollView(props: any) {
 }
 
 TaroKeyboardAwareScrollView.options = {
-  addGlobalClass: true
+  addGlobalClass: true,
 }
 
 export default TaroKeyboardAwareScrollView
