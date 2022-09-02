@@ -3,6 +3,8 @@ import { createEpicMiddleware } from 'redux-observable'
 import { rootReducer } from './reducer'
 import { rootEpic } from './epic'
 
+const reduxLogger = require('redux-logger')
+
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
@@ -14,11 +16,11 @@ const epicMiddleware = createEpicMiddleware()
 const middlewares = [epicMiddleware]
 
 if (process.env.NODE_ENV === 'development' && process.env.TARO_ENV !== 'quickapp') {
-  middlewares.push(require('redux-logger').createLogger())
+  middlewares.push(reduxLogger.createLogger())
 }
 
 const enhancer = composeEnhancers(
-  applyMiddleware(...middlewares)
+  applyMiddleware(...middlewares),
   // other store enhancers if any
 )
 

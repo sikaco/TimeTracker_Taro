@@ -14923,7 +14923,7 @@ react-native-known-styling-properties@^1.0.4:
   resolved "https://registry.npmmirror.com/react-native-known-styling-properties/-/react-native-known-styling-properties-1.1.0.tgz#04e961be62bfff64753b7fbbfb5d50af2f0e4421"
   integrity sha512-VYR9Sy0VV/v43OzkojCDRQ85HIfwM+hJ8x9avdEMRZ5s68Lmfsy+U4u85LNOYbrMKZ1zpZd4Zvk+vB0IW4LRmA==
 
-react-native-linear-gradient@^2.5.6:
+react-native-linear-gradient@^2.6.2:
   version "2.6.2"
   resolved "https://registry.npmmirror.com/react-native-linear-gradient/-/react-native-linear-gradient-2.6.2.tgz#56598a76832724b2afa7889747635b5c80948f38"
   integrity sha512-Z8Xxvupsex+9BBFoSYS87bilNPWcRfRsGC0cpJk72Nxb5p2nEkGSBv73xZbEHnW2mUFvP+huYxrVvjZkr/gRjQ==

@@ -46,11 +46,6 @@ const Index: FunctionComponent<Props> = () => {
     // console.log('actions.getProjectTags', actions.getProjectTags)
   }, [])
 
-  const arr = [
-    1,
-    2,
-    '3']
-
   return <View className="index">1234</View>
 }
 
