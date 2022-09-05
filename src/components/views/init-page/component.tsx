@@ -20,7 +20,7 @@ const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
   const { actions, a } = props
 
   useEffect(() => {
-    actions.test('1111')
+    actions.test(1111)
   }, [])
 
   return <View ref={ref} className="index">{a}</View>

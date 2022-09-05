@@ -13,7 +13,7 @@ export const getStorageData = async (key: string) => {
     const { data } = await Taro.getStorage({ key })
     result = data
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
   return result
 }
