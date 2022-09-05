@@ -8,7 +8,12 @@ const config = {
     750: 1,
     828: 1.81 / 2
   },
-  compiler: "webpack5",
+  compiler: {
+    type: "webpack5",
+    prebundle: {
+      exclude: ['react-native'] // 修复编译时 react-native 引起的奇怪错误。
+    },
+  },
   sourceRoot: "src",
   outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: [],
@@ -19,8 +24,8 @@ const config = {
   },
   alias: {
     "$src": path.resolve(__dirname, "..", "src"),
-    "@scss": path.resolve(__dirname, "..", "src/scss"),
-    "@service": path.resolve(__dirname, "..", "src/service"),
+    // "@scss": path.resolve(__dirname, "..", "src/scss"),
+    // "@service": path.resolve(__dirname, "..", "src/service"),
     "$components": path.resolve(__dirname, "..", "src/components"),
     "$views": path.resolve(__dirname, "..", "src/components/views"),
     "$xuder": path.resolve(__dirname, "..", "src/components/xuder"),
