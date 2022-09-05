@@ -6,7 +6,7 @@ import { GlobalState } from '$xuder/reducer'
 import cx from 'classnames'
 import { DispatchProps, StateProps } from './types'
 import { actions } from './modules'
-import './index.scss'
+import styles from './index.module.scss'
 
 export interface CommonProps { dispatch: any }
 
@@ -19,11 +19,13 @@ const cxPrefix = 'organization-portal'
 const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
   const { actions, a } = props
 
+  console.log('stylesstyles', styles)
+
   useEffect(() => {
-    actions.test(1111)
+    actions.test(111)
   }, [])
 
-  return <View ref={ref} className="index">{a}</View>
+  return <View ref={ref} className={styles['index']}>{a}</View>
 }
 
 export default connect<StateProps, DispatchProps, OwnProps>(
