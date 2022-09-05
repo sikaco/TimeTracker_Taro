@@ -24,8 +24,10 @@ const enhancer = composeEnhancers(
   // other store enhancers if any
 )
 
-export default function configStore() {
-  const store = createStore(rootReducer, enhancer)
+const initStore = {}
+
+export default function configureStore() {
+  const store = createStore(rootReducer, initStore, enhancer)
   epicMiddleware.run(rootEpic)
 
   return store

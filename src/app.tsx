@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 
-import configStore from './components/xuder/store'
+import configureStore from './components/xuder/store'
 
 import './app.scss'
 
-const store = configStore()
+const store = configureStore()
 
 class App extends Component {
   componentDidMount() {}
