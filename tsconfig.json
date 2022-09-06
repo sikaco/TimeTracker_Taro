@@ -30,11 +30,11 @@
       "$components/*": [
         "src/components/*"
       ],
-      "$views": [
-        "src/components/views"
+      "$pages": [
+        "src/components/pages"
       ],
-      "$views/*": [
-        "src/components/views/*"
+      "$pages/*": [
+        "src/components/pages/*"
       ],
       "$xuder": [
         "src/components/xuder"

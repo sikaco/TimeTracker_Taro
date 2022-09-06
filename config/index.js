@@ -24,10 +24,8 @@ const config = {
   },
   alias: {
     "$src": path.resolve(__dirname, "..", "src"),
-    // "@scss": path.resolve(__dirname, "..", "src/scss"),
-    // "@service": path.resolve(__dirname, "..", "src/service"),
     "$components": path.resolve(__dirname, "..", "src/components"),
-    "$views": path.resolve(__dirname, "..", "src/components/views"),
+    "$pages": path.resolve(__dirname, "..", "src/components/pages"),
     "$xuder": path.resolve(__dirname, "..", "src/components/xuder"),
     "$utils": path.resolve(__dirname, "..", "src/components/utils"),
   },

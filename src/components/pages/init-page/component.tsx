@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useMemo } from 'react'
+import React, { useEffect } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { View } from '@tarojs/components'
@@ -14,12 +14,8 @@ export interface OwnProps extends CommonProps {}
 
 export type Props = StateProps & DispatchProps & Readonly<OwnProps>
 
-const cxPrefix = 'organization-portal'
-
 const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
   const { actions, a } = props
-
-  console.log('stylesstyles', styles)
 
   useEffect(() => {
     actions.test(111)
