@@ -1,4 +1,23 @@
 const path = require("path");
+
+const commonPostCSSConfig = {
+  pxtransform: {
+    enable: true,
+    config: {}
+  },
+  autoprefixer: {
+    enable: true,
+    config: {}
+  },
+  cssModules: {
+    enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+    config: {
+      namingPattern: "module", // 转换模式，取值为 global/module
+      generateScopedName: "[folder]_[local]_[hash:base64:5]"
+    }
+  }
+}
+
 const config = {
   projectName: "time-tracker",
   date: "2022-9-5",
@@ -36,21 +55,7 @@ const config = {
   framework: "react",
   mini: {
     postcss: {
-      pxtransform: {
-        enable: true,
-        config: {}
-      },
-      autoprefixer: {
-        enable: true,
-        config: {}
-      },
-      cssModules: {
-        enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
-        config: {
-          namingPattern: "module", // 转换模式，取值为 global/module
-          generateScopedName: "[name]__[local]___[hash:base64:5]"
-        }
-      },
+      ...commonPostCSSConfig,
       url: {
         enable: true,
         config: {
@@ -64,20 +69,7 @@ const config = {
     staticDirectory: "static",
     esnextModules: ["taro-ui"],
     postcss: {
-      pxtransform: {
-        enable: true
-      },
-      autoprefixer: {
-        enable: true,
-        config: {}
-      },
-      cssModules: {
-        enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
-        config: {
-          namingPattern: "module", // 转换模式，取值为 global/module
-          generateScopedName: "[name]__[local]___[hash:base64:5]"
-        }
-      }
+      ...commonPostCSSConfig,
     }
   },
   rn: {
