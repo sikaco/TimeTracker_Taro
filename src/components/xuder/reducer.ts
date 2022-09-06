@@ -1,18 +1,18 @@
 import { combineReducers } from 'redux'
 import { routerReducer as router } from 'react-router-redux'
 
-import { reducer as initPageReducer, State as InitPageState } from '$pages/init-page'
+import { reducer as homepageReducer, State as homepageState } from '$pages/homepage'
 
 export interface GlobalState {
   readonly router: { location: any }
   readonly ui: {
-    readonly initPage: InitPageState
+    readonly homepage: homepageState
   }
 }
 
 export const rootReducer = combineReducers<GlobalState>({
   router,
   ui: combineReducers({
-    initPage: initPageReducer,
+    homepage: homepageReducer,
   }),
 })

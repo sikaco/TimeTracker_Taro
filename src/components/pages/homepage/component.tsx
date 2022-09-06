@@ -26,7 +26,7 @@ const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
 
 export default connect<StateProps, DispatchProps, OwnProps>(
   (state: GlobalState): StateProps => {
-    return state.ui.initPage
+    return state.ui.homepage
   },
   (dispatch) => {
     return {

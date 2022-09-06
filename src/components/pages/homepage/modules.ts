@@ -10,7 +10,7 @@ import { State } from './types'
 // import * as req from './requests'
 // import * as utils from './utils'
 
-const { namespace, success, failure } = namespaceFnGenerator('INIT_PAGE')
+const { namespace, success, failure } = namespaceFnGenerator('HOMEPAGE')
 
 const defaultState: State = {
   a: 1,
